@@ -1,0 +1,223 @@
+1. Basic Connectivity
+ping: Check the reachability of a host and measure the round-trip time for messages sent to the destination.
+bash
+Copy code
+ping google.com
+
+
+traceroute: Display the route and measure transit delays of packets across a network.
+bash
+Copy code
+traceroute google.com
+
+
+mtr: Combines the functionality of ping and traceroute to provide a real-time view of network path performance.
+bash
+Copy code
+mtr google.com
+
+
+curl: Transfer data from or to a server, useful for testing HTTP, FTP, and other protocols.
+bash
+Copy code
+curl -I http://example.com
+
+
+wget: Non-interactive network downloader, useful for testing HTTP and FTP downloads.
+bash
+Copy code
+wget http://example.com
+
+
+2. DNS Lookup and Testing
+nslookup: Query Internet domain name servers to find DNS details like IP addresses.
+bash
+Copy code
+nslookup google.com
+
+
+dig: A more advanced DNS lookup tool, useful for querying DNS records and testing DNS servers.
+bash
+Copy code
+dig google.com
+
+
+host: Simple utility to perform DNS lookups.
+bash
+Copy code
+host google.com
+
+
+3. Network Configuration and Interface Testing
+ifconfig: View and configure network interface settings (deprecated in favor of ip in modern Linux systems).
+bash
+Copy code
+ifconfig
+
+
+ip: A more powerful tool to view and configure network interfaces, routing, and tunnels.
+bash
+Copy code
+ip addr show
+
+
+nmcli: Command-line tool for controlling NetworkManager and reporting network status.
+bash
+Copy code
+nmcli device status
+
+
+ethtool: Display or change Ethernet device settings.
+bash
+Copy code
+ethtool eth0
+
+
+iwconfig: Configure wireless network interfaces.
+bash
+Copy code
+iwconfig wlan0
+
+
+4. Port and Service Scanning
+nmap: Network exploration tool and security/port scanner.
+bash
+Copy code
+nmap -sP 192.168.1.0/24
+
+
+ss: Socket statistics, replacement for netstat for displaying network connections.
+bash
+Copy code
+ss -tuln
+
+
+netstat: Display network connections, routing tables, interface statistics, etc.
+bash
+Copy code
+netstat -tuln
+
+
+lsof: List open files, including network connections.
+bash
+Copy code
+lsof -i
+
+
+telnet: Test connectivity to a specific port on a remote server.
+bash
+Copy code
+telnet example.com 80
+
+
+nc (netcat): Versatile networking utility for reading from and writing to network connections.
+bash
+Copy code
+nc -zv example.com 80
+
+
+5. Throughput and Performance Testing
+iperf: Network testing tool that can create TCP and UDP data streams and measure the throughput of a network.
+bash
+Copy code
+iperf -c server_ip -p port_number
+
+
+speedtest-cli: Command-line interface for testing internet bandwidth using Speedtest.net.
+bash
+Copy code
+speedtest-cli
+
+
+iperf3: Enhanced version of iperf with improved features.
+bash
+Copy code
+iperf3 -c server_ip
+
+
+6. Packet Capture and Analysis
+tcpdump: Packet analyzer; capture network traffic.
+bash
+Copy code
+tcpdump -i eth0
+
+
+wireshark: A graphical network protocol analyzer that allows you to capture and interactively browse the traffic running on a computer network.
+bash
+Copy code
+wireshark
+
+
+7. Network File Transfer
+scp: Secure copy; securely transfer files between hosts on a network.
+bash
+Copy code
+scp file.txt user@remote_host:/path/to/destination
+
+
+rsync: Remote sync; transfer and synchronize files across systems.
+bash
+Copy code
+rsync -avz source/ user@remote_host:/path/to/destination
+
+
+8. Firewall Testing and Management
+ufw: Uncomplicated Firewall; a user-friendly interface for managing firewall rules.
+bash
+Copy code
+sudo ufw status
+
+
+iptables: Legacy command-line tool to configure the IP packet filter rules of the Linux kernel firewall.
+bash
+Copy code
+sudo iptables -L
+
+
+9. Other Useful Commands
+route: Show and manipulate the IP routing table.
+bash
+Copy code
+route -n
+
+
+hostname: Show or set the system’s host name.
+bash
+Copy code
+hostname
+
+
+arp: Display or manipulate the system’s ARP cache.
+bash
+Copy code
+arp -a
+
+
+ping6: Test IPv6 network connectivity.
+bash
+Copy code
+ping6 ipv6.google.com
+
+
+whois: Query domain registration information.
+bash
+Copy code
+whois example.com
+
+
+sshd: Secure Shell Daemon; manages connections to the server using the SSH protocol.
+bash
+Copy code
+sudo service sshd status
+
+
+scp: Secure copy protocol; transfer files securely between hosts.
+bash
+Copy code
+scp file.txt user@remote_host:/path/to/destination
+
+
+tshark: Terminal-based Wireshark for capturing and analyzing network packets.
+bash
+Copy code
+tshark -i eth0
